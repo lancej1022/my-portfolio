@@ -7,12 +7,12 @@ import { WorkTime } from './workTime.svg';
 
 const Section = styled.section`
   width: 80%;
-  margin: 0 auto 6rem auto;
+  margin: 6rem auto;
   text-align: center;
 
   h2 {
     color: ${(props) => props.theme.colorPrimary};
-    font-size: ${(props) => props.theme.fontXL};
+    font-size: ${(props) => props.theme.fontXXL};
   }
 
   .footer-svg {

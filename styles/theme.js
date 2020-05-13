@@ -9,10 +9,13 @@ const Theme = {
   // ALTERNATIVE PRIMARY: #0070f3,
   colorLight: '#44cfcb',
   colorExtraLight: '#EBE9E9',
+  gradientPrimary:
+    'linear-gradient(146deg, #058ED9 40%, #44CFCB 100%) no-repeat 50% 50% / 100% 100%',
 
   /**
    * FONT SIZES
    */
+  fontXXL: '4.5rem',
   fontXL: '3.5rem',
   fontLarge: '3rem',
   fontMedium: '2rem',

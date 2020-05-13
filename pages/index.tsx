@@ -25,7 +25,12 @@ const Main = styled.main`
 export default function Home({ allPostsData }) {
   return (
     <>
-      <Head>…</Head>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <NavBar />
       <Main>
         {/* <Layout home> */}
