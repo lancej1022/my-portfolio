@@ -33,7 +33,7 @@ const SkillShowcase = styled.div`
   background-color: #fff;
   max-width: 80%;
   margin: 0 auto 4rem auto;
-  box-shadow: 4px 6px 20px 2px rgba(0, 118, 255, 0.11);
+  box-shadow: 4px 6px 20px 2px rgba(0, 0, 0, 0.11);
 
   p {
     margin: 0;

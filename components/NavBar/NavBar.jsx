@@ -3,40 +3,60 @@ import styled from 'styled-components';
 
 import Hamburger from './Hamburger/Hamburger';
 
-const Nav = styled.div`
+const Nav = styled.header`
   display: flex;
   align-items: center;
   padding: 0 2rem;
   justify-content: space-between;
-  // box-shadow: 0 0.4px 1.8px rgba(0, 0, 0, 0.028), 0 1.3px 4.3px rgba(0, 0, 0, 0.04),
-  //   0 2.7px 8.1px rgba(0, 0, 0, 0.05), 0 5.4px 14.5px rgba(0, 0, 0, 0.06),
-  //   0 10.7px 27.2px rgba(0, 0, 0, 0.072), 0 28px 65px rgba(0, 0, 0, 0.1);
 
-  box-shadow: 0 0.5px 28.9px rgba(0, 0, 0, 0.025), 0 1.3px 29.5px rgba(0, 0, 0, 0.036),
-    0 2.8px 27.7px rgba(0, 0, 0, 0.045), 0 5.1px 27.2px rgba(0, 0, 0, 0.054),
-    0 8.9px 32.3px rgba(0, 0, 0, 0.065), 0 20px 80px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
   background-color: ${(props) => props.theme.colorExtraLight};
-  opacity: 0.97;
+  opacity: 0.98;
   border-radius: 0 0 1rem 1rem;
 `;
 
 const NavList = styled.nav`
-  display: ${({ active }) => (active === 'true' ? 'block' : 'none')};
-  transition: transform 0.4s ease-in-out;
+  height: ${({ active }) => (active === 'true' ? `100%` : `0`)};
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 11; /* Sit on top */
+  left: 0;
+  top: 0;
+  // background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: ${(props) => props.theme.colorExtraLight};
+  opacity: 0.97;
+  // background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 
   ul {
-  list-style-type: none;
-  text-align: center;
-  padding-left: 0;
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 3rem; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
   }
 
   li {
-    margin 1rem
+    margin 1rem;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: ${(props) => props.theme.colorPrimary};;
+    display: block; /* Display block instead of inline */
+    transition: all 0.3s; /* Transition effects on hover (color) */
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 

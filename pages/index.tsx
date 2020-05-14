@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import NavBar from '../components/NavBar/NavBar';
 import Hero from '../components/Hero/Hero';
 import SkillsSections from '../components/SkillsSection/SkillsSection';
+import ProjectsContainer from '../components/containers/ProjectsContainer/ProjectsContainer';
 
 import { getSortedPostsData } from '../lib/posts';
 import { GetStaticProps } from 'next';
@@ -36,6 +37,8 @@ export default function Home({ allPostsData }) {
         {/* <Layout home> */}
         <Hero />
         <SkillsSections />
+        <ProjectsContainer />
+        {/* <ProjectsContainer /> */}
         {/* 
         <section className={utilStyles.headingMd}>…</section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

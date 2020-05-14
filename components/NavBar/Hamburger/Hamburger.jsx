@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 const Hamburger = ({ isOpen, onClick }) => {
-  // const [isOpen, setIsOpen] = useState(false);
-
   return (
     <button
       className={`hamburger hamburger--collapse ${isOpen ? 'is-active' : ''}`}

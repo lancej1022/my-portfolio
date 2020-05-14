@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { HeroSVG } from './Hero.svg';
+import HeroSVG from './Hero.svg';
+import { WorkTime } from '../SkillsSection/workTime.svg';
 
 const HeroContainer = styled.div`
   width: 100%;
