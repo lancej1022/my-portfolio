@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import Tilt from 'react-parallax-tilt';
 
 const AboutSection = styled.section`
-  padding: 0 2rem;
+  width: 80%;
+  margin: 6rem auto;
   h2 {
     text-align: center;
     font-size: ${(props) => props.theme.fontXXL};
@@ -33,16 +34,18 @@ const AboutContainer = () => {
     <>
       <AboutSection>
         <h2>About Me</h2>
-        <p>I&apos;m a full-stack software engineer originally from Tempe, AZ.</p>
         <p>
           I enjoy creating things that live on the internet, whether that involves
           constructing a performant server to handle busines logic or whether I&apos;m
           building an engaging UI that users will love.
         </p>
         <p>
-          Most recently I&apos;ve worked under DrawQL, but before then I was at GoDaddy
-          working to try and improve the user experience and perception of our hosting
-          lineup.
+          I&apos;m originally from Tempe, AZ but have also enjoyed living in Los Angeles.
+          I&apos;m very open to living in new areas!
+        </p>
+        <p>
+          My most recent work was under DrawQL, but before then I was at GoDaddy trying to
+          improve the user experience and perception of our hosting lineup.
         </p>
         <Tilt>
           <PhotoContainer>
