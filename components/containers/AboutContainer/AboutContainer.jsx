@@ -24,7 +24,7 @@ const PhotoContainer = styled.div`
   border: 0.1rem solid ${(props) => props.theme.colorPrimary};
   overflow: hidden;
   max-width: 30rem;
-  margin: 0 auto;
+  margin: 4rem auto;
   box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
 `;
 
