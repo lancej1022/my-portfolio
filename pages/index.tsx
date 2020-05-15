@@ -7,6 +7,8 @@ import Hero from '../components/Hero/Hero';
 import SkillsSections from '../components/SkillsSection/SkillsSection';
 import ProjectsContainer from '../components/containers/ProjectsContainer/ProjectsContainer';
 import AboutContainer from '../components/containers/AboutContainer/AboutContainer';
+import ContactContainer from '../components/containers/ContactContainer/ContactContainer';
+import Footer from '../components/Footer/Footer';
 
 import { getSortedPostsData } from '../lib/posts';
 import { GetStaticProps } from 'next';
@@ -40,6 +42,8 @@ export default function Home({ allPostsData }) {
         <SkillsSections />
         <ProjectsContainer />
         <AboutContainer />
+        <ContactContainer />
+        <Footer />
         {/* 
         <section className={utilStyles.headingMd}>…</section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

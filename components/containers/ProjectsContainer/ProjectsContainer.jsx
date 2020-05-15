@@ -6,7 +6,6 @@ const ProjectSection = styled.section`
   margin: 8rem auto;
   h2 {
     text-align: center;
-    color: ${(props) => props.theme.colorPrimary};
     font-size: ${(props) => props.theme.fontXXL};
     margin-bottom: 1rem;
   }
@@ -79,7 +78,6 @@ const ProjectsContainer = () => {
             />
           );
         })}
-        {/* <SlideUpHover title="hello" copy="lolol" github="nah-fam" background /> */}
       </CardsContainer>
     </ProjectSection>
   );

@@ -11,7 +11,6 @@ const Section = styled.section`
   text-align: center;
 
   h2 {
-    color: ${(props) => props.theme.colorPrimary};
     font-size: ${(props) => props.theme.fontXXL};
   }
 

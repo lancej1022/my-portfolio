@@ -19,7 +19,7 @@ const Theme = {
   fontXL: '3.5rem',
   fontLarge: '3rem',
   fontMedium: '2rem',
-  fontSmall: '1.2rem',
+  fontSmall: '1.4rem',
 
   /**
    * BREAKPOINTS
