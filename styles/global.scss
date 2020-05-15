@@ -22,6 +22,11 @@ body {
   box-sizing: border-box;
 }
 
+h1,
+h2 {
+  color: $color-primary;
+}
+
 p {
   color: #666;
 }
