@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const CardContainer = styled.div`
   width: 100%;
 
-  @media (hover: hover) and (min-width: ${(props) => props.theme.breakpointTablet}) {
+  @media screen and (min-width: ${(props) => props.theme.breakpointDesktop}) {
     .card:after {
       transform: translateY(0);
     }
@@ -69,7 +68,11 @@ const CardContainer = styled.div`
   }
 `;
 
-const Card = styled.div`
+interface CardProps {
+  readonly background: string;
+}
+
+const Card = styled.div<CardProps>`
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -101,7 +104,7 @@ const Card = styled.div`
     transition: transform calc(700ms * 1.5) cubic-bezier(0.19, 1, 0.22, 1);
     pointer-events: none;
   }
-  
+
   &:after {
     content: '';
     display: block;
@@ -120,18 +123,19 @@ const Card = styled.div`
       hsla(0, 0%, 0%, 0.123) 39.4%,
       hsla(0, 0%, 0%, 0.182) 46.6%,
       hsla(0, 0%, 0%, 0.249) 53.1%,
-      hsla(0, 0%, 0%, 0.320) 58.9%,
+      hsla(0, 0%, 0%, 0.32) 58.9%,
       hsla(0, 0%, 0%, 0.394) 64.3%,
       hsla(0, 0%, 0%, 0.468) 69.3%,
-      hsla(0, 0%, 0%, 0.540) 74.1%,
+      hsla(0, 0%, 0%, 0.54) 74.1%,
       hsla(0, 0%, 0%, 0.607) 78.8%,
       hsla(0, 0%, 0%, 0.668) 83.6%,
       hsla(0, 0%, 0%, 0.721) 88.7%,
       hsla(0, 0%, 0%, 0.762) 94.1%,
-      hsla(0, 0%, 0%, 0.790) 100%
+      hsla(0, 0%, 0%, 0.79) 100%
     );
     transform: translateY(-50%);
     transition: transform calc(700ms * 2) cubic-bezier(0.19, 1, 0.22, 1);
+  }
 `;
 
 const Content = styled.div`
@@ -164,29 +168,14 @@ const Content = styled.div`
   }
 `;
 
-const Button = styled.button`
-  cursor: pointer;
-  margin-top: 1.5rem;
-  padding: 1.5rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
+interface SlideUpProps {
+  title: string;
+  copy: string;
+  github: string;
+  background: string;
+}
 
-  &:hover {
-    background-color: lighten(black, 5%);
-  }
-
-  &:focus {
-    outline: 1px dashed yellow;
-    outline-offset: 3px;
-  }
-`;
-
-const SlideUpHover = ({ title, copy, github, background }) => {
+const SlideUpHover: React.FC<SlideUpProps> = ({ title, copy, github, background }) => {
   return (
     <CardContainer>
       <Card className="card" background={background}>

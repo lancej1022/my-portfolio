@@ -10,10 +10,6 @@ const AboutSection = styled.section`
     font-size: ${(props) => props.theme.fontXXL};
   }
 
-  p {
-    // font-size: ${(props) => props.theme.fontMedium};
-  }
-
   @media (min-width: ${(props) => props.theme.breakpointTablet}) {
     width: 80%;
     margin: 0 auto;
@@ -29,7 +25,7 @@ const PhotoContainer = styled.div`
   box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
 `;
 
-const AboutContainer = () => {
+const AboutContainer: React.FC = () => {
   return (
     <>
       <AboutSection>
@@ -49,7 +45,7 @@ const AboutContainer = () => {
         </p>
         <Tilt>
           <PhotoContainer>
-            <img src="/images/lance-photo.jpg" alt="Lance" />
+            <img src="/images/lance-photo.jpg" loading="lazy" alt="Lance" />
           </PhotoContainer>
         </Tilt>
       </AboutSection>

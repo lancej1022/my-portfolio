@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import { GetStaticProps } from 'next';
 import styled from 'styled-components';
 
 import NavBar from '../components/NavBar/NavBar';
@@ -11,8 +11,11 @@ import ContactContainer from '../components/containers/ContactContainer/ContactC
 import Footer from '../components/Footer/Footer';
 
 import { getSortedPostsData } from '../lib/posts';
-import { GetStaticProps } from 'next';
 
+/**
+ * Fetches data to display blog posts
+ * @param context
+ */
 export const getStaticProps: GetStaticProps = async (context) => {
   const allPostsData = getSortedPostsData();
   return {
@@ -22,11 +25,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
+/* Serves as a basic wrapper for page content */
 const Main = styled.main`
   max-width: 100%;
 `;
 
-export default function Home({ allPostsData }) {
+/* Serves as the main component that gets rendered as the home page */
+const Home: React.FunctionComponent = ({ allPostsData }: any) => {
   return (
     <>
       <Head>
@@ -66,4 +71,6 @@ export default function Home({ allPostsData }) {
       </Main>
     </>
   );
-}
+};
+
+export default Home;

@@ -36,7 +36,11 @@ const ContactSection = styled.section`
   }
 `;
 
-const ContactContainer = () => {
+/**
+ * Container includes hardcoded links to GitHub, LinkedIn, and Twitter
+ * all icons are lazy loaded since this content should be well outside of the initial viewport area
+ */
+const ContactContainer: React.FC = () => {
   return (
     <ContactSection>
       <h2>Contact Me</h2>

@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ReactIcon } from './React-icon.svg';
-import { NodeIcon } from './Node.js_logo.svg';
-import { WorkTime } from './workTime.svg';
-
 const Section = styled.section`
   width: 80%;
   margin: 6rem auto;
@@ -55,7 +51,10 @@ const SVGFooter = styled.div`
   }
 `;
 
-const SkillsSection = () => {
+/**
+ * Basic section that describes my current skill set
+ */
+const SkillsSection: React.FC = () => {
   return (
     <>
       <Section>
@@ -65,20 +64,31 @@ const SkillsSection = () => {
           I&apos;m comfortable learning almost anything used in Web Development.
         </p>
         <SkillShowcase>
-          {/* dont forget to put an SVG icon of some sort here */}
-          <ReactIcon />
+          <img
+            src="/images/React-icon.svg"
+            loading="lazy" // this image will always be below the viewport so lazy load it
+            alt="React logo"
+          />
           <h3>Frontend Technologies</h3>
           <p>JavaScript/TypeScript, React, Semantic HTML, Sass, and GraphQL</p>
         </SkillShowcase>
         <SkillShowcase>
-          {/* dont forget to put an SVG icon of some sort here */}
-          <NodeIcon />
+          <img
+            src="/images/Node.js_logo.svg"
+            loading="lazy" // this image will always be below the viewport so lazy load it
+            alt="React logo"
+          />
           <h3>Other Technologies</h3>
           <p>Node.js, SQL, NoSql, AWS, and Docker</p>
         </SkillShowcase>
       </Section>
       <SVGFooter>
-        <WorkTime className="footer-svg" />
+        <img
+          src="/images/workTime.svg"
+          className="footer-svg"
+          loading="lazy" // this image will always be below the viewport so lazy load it
+          alt="React logo"
+        />
       </SVGFooter>
     </>
   );
