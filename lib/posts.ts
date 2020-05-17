@@ -107,7 +107,7 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as { date: string; title: string })
     };
   });
   // Sort posts by date
@@ -125,8 +125,8 @@ export function getAllPostIds() {
   return fileNames.map((fileName) => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, ''),
-      },
+        id: fileName.replace(/\.md$/, '')
+      }
     };
   });
 }
@@ -146,6 +146,6 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
+    ...(matterResult.data as { date: string; title: string })
   };
 }

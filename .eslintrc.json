@@ -1,9 +1,13 @@
 {
   "extends": [
-    "airbnb",
+    "airbnb-typescript",
+    "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
     "prettier/react"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "env": {
     "browser": true,
     "commonjs": true,
@@ -13,7 +17,9 @@
   },
   "rules": {
     "jsx-a11y/href-no-hash": ["off"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": "off",
     "max-len": [
       "warn",
       {
@@ -28,5 +34,8 @@
         "ignoreRegExpLiterals": true
       }
     ]
+  },
+  "globals": {
+    "React": "writable"
   }
 }

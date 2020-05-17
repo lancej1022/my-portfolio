@@ -19,7 +19,10 @@ const Section = styled.section`
   }
 `;
 
-const Footer = () => {
+/**
+ * Reusable footer component that goes across pages
+ */
+const Footer: React.FC = () => {
   return (
     <Section>
       <h4>Developed by Lance Jeffers</h4>

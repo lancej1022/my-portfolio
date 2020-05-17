@@ -1,8 +1,4 @@
-import React from 'react';
 import styled from 'styled-components';
-
-import HeroSVG from './Hero.svg';
-import { WorkTime } from '../SkillsSection/workTime.svg';
 
 const HeroContainer = styled.div`
   width: 100%;
@@ -53,7 +49,7 @@ const HeroFooter = styled.div`
   min-height: 8rem;
   width: 100vw;
   background-color: ${(props) => props.theme.colorDark};
-  margin-top -1.8rem;
+  margin-top: -1.8rem;
 `;
 
 const ContactButton = styled.a`
@@ -65,7 +61,12 @@ const ContactButton = styled.a`
   box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
 `;
 
-const Hero = () => {
+/**
+ * Hero section for home page specifically.
+ * Note that the image within HeroRight is hidden on mobile devices,
+ * whereas the image after the HeroSection is mobile-only (to achieve 100% width).
+ */
+const Hero: React.FC = () => {
   return (
     <HeroContainer>
       <HeroSection>
@@ -77,10 +78,20 @@ const Hero = () => {
           <ContactButton>Contact me</ContactButton>
         </HeroLeft>
         <HeroRight className="hero-right">
-          <HeroSVG className="screen-size--md" />
+          <img
+            src="/images/Hero.svg"
+            loading="eager" // this image will always be in the viewport, so try to load it ASAP
+            className="screen-size--md"
+            alt="animated person and code in background"
+          />
         </HeroRight>
       </HeroSection>
-      <HeroSVG className="mobile-only" />
+      <img
+        src="/images/Hero.svg"
+        loading="eager" // this image will always be in the viewport, so try to load it ASAP
+        className="mobile-only"
+        alt="animated person and code in background"
+      />
       <HeroFooter />
     </HeroContainer>
   );
