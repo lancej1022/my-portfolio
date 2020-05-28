@@ -16,6 +16,9 @@
     "node": true
   },
   "rules": {
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": ["warn", { "allowShortCircuit": true }],
+    "react/jsx-props-no-spreading": "warn",
     "jsx-a11y/href-no-hash": ["off"],
     "react/prop-types": "warn",
     "react/react-in-jsx-scope": "off",

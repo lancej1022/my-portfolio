@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Project } from '../../interfaces';
 
 const CardContainer = styled.div`
   width: 100%;
@@ -168,19 +169,12 @@ const Content = styled.div`
   }
 `;
 
-interface SlideUpProps {
-  title: string;
-  copy: string;
-  github: string;
-  background: string;
-}
-
-const SlideUpHover: React.FC<SlideUpProps> = ({ title, copy, github, background }) => {
+const SlideUpHover: React.FC<Project> = ({ name, copy, github, background }) => {
   return (
     <CardContainer>
       <Card className="card" background={background}>
         <Content className="content">
-          <h3 className="title">{title}</h3>
+          <h3 className="title">{name}</h3>
           <p className="copy">{copy}</p>
           <div className="card__link">
             <a href={github}>

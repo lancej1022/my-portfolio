@@ -87,8 +87,8 @@ const NavBar: React.FC = () => {
       </a>
       <Hamburger onClick={handleClick} isOpen={isOpen} />
       {/* isOpen must be converted to a string since we cannot pass a boolean to the styled component */}
-      <NavList className="nav-list" active={isOpen}>
-        <ul>
+      <NavList className="nav-list" active={isOpen} data-testid="nav">
+        <ul data-testid="nav-list">
           <li className="nav-item">Home</li>
           <li className="nav-item">About</li>
           <li className="nav-item">Projects</li>

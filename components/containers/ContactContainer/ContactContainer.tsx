@@ -45,7 +45,7 @@ const ContactContainer: React.FC = () => {
     <ContactSection>
       <h2>Contact Me</h2>
       <p>The best way to reach me is through LinkedIn, so click the link below!</p>
-      <div className="social-icons">
+      <div className="social-icons" data-testid="social-icons">
         <a
           href="https://github.com/lancej1022/"
           target="_blank"
