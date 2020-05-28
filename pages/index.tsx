@@ -16,7 +16,8 @@ import { getSortedPostsData } from '../lib/posts';
  * Fetches data to display blog posts
  * @param context
  */
-export const getStaticProps: GetStaticProps = async (context) => {
+// export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -30,8 +31,11 @@ const Main = styled.main`
   max-width: 100%;
 `;
 
-/* Serves as the main component that gets rendered as the home page */
-const Home: React.FunctionComponent = ({ allPostsData }: any) => {
+/* Serves as the main component that gets rendered as the home page 
+below line is commented out since post fetching hasnt been fully implemented yet
+*/
+// const Home: React.FunctionComponent = ({ allPostsData }: any) => {
+const Home: React.FunctionComponent = () => {
   return (
     <>
       <Head>

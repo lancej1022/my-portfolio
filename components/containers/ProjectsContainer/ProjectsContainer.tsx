@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import SlideUpHover from '../../HoverCard/SlideUpHover';
+import { Project } from '../../../interfaces';
 
 const ProjectSection = styled.section`
   margin: 6rem auto;
@@ -40,13 +42,6 @@ const CardsContainer = styled.div`
   }
 `;
 
-interface Project {
-  name: string;
-  copy: string;
-  github: string;
-  background: string;
-}
-
 const projects: Project[] = [
   {
     name: 'DrawQL',
@@ -58,7 +53,7 @@ const projects: Project[] = [
     name: 'SnapDesk',
     copy:
       'Tool for fostering collaboration between Juniors and Seniors in your org. Built with React, Redux, and Express.',
-    github: 'https://github.com/lancej1022/snapdesk-app',
+    github: 'https://github.com/lancej1022/snapdesk',
     background: '/images/SnapdeskBG.jpg'
   },
   {
@@ -86,7 +81,7 @@ const ProjectsContainer: React.FC = () => {
         {projects.map((project) => {
           return (
             <SlideUpHover
-              title={project.name}
+              name={project.name}
               copy={project.copy}
               github={project.github}
               background={project.background}
