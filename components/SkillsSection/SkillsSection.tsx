@@ -6,7 +6,7 @@ const SkillsWrapper = styled.section`
     max-width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 1fr;
     place-items: center;
   }
 `;
@@ -36,7 +36,7 @@ const ShowcaseWrapper = styled.div`
   @media screen and (min-width: ${(props) => props.theme.breakpointTablet}) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     margin-top: 4rem;
   }
 `;
@@ -109,7 +109,10 @@ const SkillsSection: React.FC = () => {
               loading="lazy" // this image will always be below the viewport so lazy load it
               alt="React logo"
             />
-            <h3>Other Technologies</h3>
+            <h3>
+              Other <br />
+              Technologies
+            </h3>
             <p>Node.js, SQL, NoSql, AWS, and Docker</p>
           </SkillShowcase>
         </ShowcaseWrapper>

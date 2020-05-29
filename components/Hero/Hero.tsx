@@ -75,7 +75,7 @@ const ContactButton = styled.a`
  */
 const Hero: React.FC = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="top-of-page">
       <HeroSection>
         <HeroLeft className="hero-left">
           <h1>

@@ -43,7 +43,7 @@ const ContactSection = styled.section`
  */
 const ContactContainer: React.FC = () => {
   return (
-    <ContactSection>
+    <ContactSection id="contact">
       <h2>Contact Me</h2>
       <p>The best way to reach me is through LinkedIn, so click the link below!</p>
       <div className="social-icons" data-testid="social-icons">
