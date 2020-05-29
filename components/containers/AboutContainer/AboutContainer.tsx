@@ -28,7 +28,7 @@ const PhotoContainer = styled.div`
 const AboutContainer: React.FC = () => {
   return (
     <>
-      <AboutSection>
+      <AboutSection id="about">
         <h2>About Me</h2>
         <p>
           I enjoy creating things that live on the internet, whether that involves

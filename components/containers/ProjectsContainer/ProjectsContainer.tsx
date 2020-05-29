@@ -30,7 +30,6 @@ const CardsContainer = styled.div`
   display: grid;
   place-items: center;
   grid-gap: 3rem;
-  max-width: 1024px;
   padding: 3rem;
   margin: 0 auto;
 
@@ -74,7 +73,7 @@ const projects: Project[] = [
 
 const ProjectsContainer: React.FC = () => {
   return (
-    <ProjectSection>
+    <ProjectSection id="projects">
       <h2>Projects</h2>
       <p className="desktop">&#40;Hover for details&#41;</p>
       <CardsContainer>
