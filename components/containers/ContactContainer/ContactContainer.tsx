@@ -28,6 +28,7 @@ const ContactSection = styled.section`
   img {
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
     width: 100%;
+    max-height: 7rem;
     transition: all 0.3s;
 
     &:hover {
