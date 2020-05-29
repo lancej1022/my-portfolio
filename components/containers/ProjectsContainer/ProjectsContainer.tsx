@@ -29,9 +29,10 @@ const ProjectSection = styled.section`
 const CardsContainer = styled.div`
   display: grid;
   place-items: center;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   max-width: 1024px;
   padding: 3rem;
+  margin: 0 auto;
 
   @media (min-width: ${(props) => props.theme.breakpointTablet}) {
     grid-template-columns: repeat(2, 1fr);
@@ -57,18 +58,17 @@ const projects: Project[] = [
     background: '/images/SnapdeskBG.jpg'
   },
   {
-    name: 'Rate My Landlord',
-    copy:
-      'Web App in the style of ratemyprofessors.com where renters can look up properties or rate landlords.',
+    name: 'R.M.L',
+    copy: 'Rate My Landlord: where renters can look up properties or rate landlords.',
     github: 'https://github.com/team-exotic/ratemylandlord',
     background: '/images/ratemylandlord.jpg'
   },
   {
-    name: 'My Portfolio',
+    name: 'Portfolio',
     copy:
       'The code for this portfolio is public! Check it out to see how I used TypeScript, Next.js, and GraphQL.',
     github: 'https://github.com/lancej1022/my-portfolio',
-    background: '/images/ratemylandlord.jpg'
+    background: '/images/portfolio.jpg'
   }
 ];
 

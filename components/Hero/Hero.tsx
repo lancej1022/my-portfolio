@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const HeroContainer = styled.div`
   width: 100%;
+  max-height: 100vh;
 
   .mobile-only {
     width: 100%;
@@ -21,8 +22,14 @@ const HeroSection = styled.section`
     color: ${(props) => props.theme.colorPrimary};
     font-size: ${(props) => props.theme.fontXL};
     line-height: ${(props) => props.theme.fontXL};
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 5rem;
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpointDesktop}) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* padding-bottom: 4rem; */
   }
 `;
 
@@ -46,8 +53,8 @@ const HeroRight = styled.div`
 `;
 
 const HeroFooter = styled.div`
-  min-height: 8rem;
-  width: 100vw;
+  min-height: 6rem;
+  width: 100%;
   background-color: ${(props) => props.theme.colorDark};
   margin-top: -1.8rem;
 `;
@@ -72,7 +79,7 @@ const Hero: React.FC = () => {
       <HeroSection>
         <HeroLeft className="hero-left">
           <h1>
-            Hi, I&apos;m Lance Jeffers. I help make the world better through awesome
+            Hey, I&apos;m Lance Jeffers. I help make the world better through awesome
             software engineering.
           </h1>
           <ContactButton>Contact me</ContactButton>
