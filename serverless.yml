@@ -1,0 +1,4 @@
+nextApp:
+  component: 'serverless-next.js'
+  inputs:
+    domain: 'lancejeffers.com'

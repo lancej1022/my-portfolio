@@ -39,6 +39,16 @@ const Home: React.FunctionComponent = () => {
   return (
     <>
       <Head>
+        <title>Lance Jeffers</title>
+        <meta name="description" content="Lance Jeffers' personal portfolio" />
+        <meta
+          name="keywords"
+          content="Lance Jeffers,Software Engineer,React Engineer,Node.js Engineer,"
+        />
+        <meta
+          name="description"
+          content="The personal portfolio page for Lance Jeffers, a fullstack JavaScript engineer"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
           rel="stylesheet"
