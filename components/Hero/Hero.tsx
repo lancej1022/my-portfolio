@@ -35,6 +35,10 @@ const HeroSection = styled.section`
 
 const HeroLeft = styled.div`
   margin-bottom: 3rem;
+
+  @media screen and (min-width: ${(props) => props.theme.breakpointDesktop}) {
+    place-self: center;
+  }
 `;
 
 const HeroRight = styled.div`
@@ -82,7 +86,7 @@ const Hero: React.FC = () => {
             Hey, I&apos;m Lance Jeffers. I help make the world better through awesome
             software engineering.
           </h1>
-          <ContactButton>Contact me</ContactButton>
+          <ContactButton href="#contact">Contact me</ContactButton>
         </HeroLeft>
         <HeroRight className="hero-right">
           <img

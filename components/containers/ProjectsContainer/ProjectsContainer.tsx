@@ -65,7 +65,7 @@ const projects: Project[] = [
   {
     name: 'Portfolio',
     copy:
-      'The code for this portfolio is public! Check it out to see how I used TypeScript, Next.js, and GraphQL.',
+      'The code for this portfolio is public! Check it out to see how I used TypeScript, Next.js, and Styled Components.',
     github: 'https://github.com/lancej1022/my-portfolio',
     background: '/images/portfolio.jpg'
   }
