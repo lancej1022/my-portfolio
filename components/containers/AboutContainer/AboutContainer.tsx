@@ -46,9 +46,9 @@ const AboutContainer: React.FC = () => {
           <div>
             <p>
               I enjoy creating things that live on the internet, whether that involves
-              constructing a performant server to handle busines logic or whether I&apos;m
-              building an engaging UI that users will love. In general, I like to be
-              challenged to go outside of my comfort zone while engineering since it
+              constructing a performant server to handle business logic or whether
+              I&apos;m building an engaging UI that users will love. In general, I like to
+              be challenged to go outside of my comfort zone while engineering since it
               forces you to learn more and become better.
             </p>
             <p>
