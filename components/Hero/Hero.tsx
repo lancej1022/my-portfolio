@@ -1,10 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-
-import { HeroSVG } from './Hero.svg';
 
 const HeroContainer = styled.div`
   width: 100%;
+  max-height: 100vh;
 
   .mobile-only {
     width: 100%;
@@ -24,13 +22,23 @@ const HeroSection = styled.section`
     color: ${(props) => props.theme.colorPrimary};
     font-size: ${(props) => props.theme.fontXL};
     line-height: ${(props) => props.theme.fontXL};
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 5rem;
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.breakpointDesktop}) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* padding-bottom: 4rem; */
   }
 `;
 
 const HeroLeft = styled.div`
   margin-bottom: 3rem;
+
+  @media screen and (min-width: ${(props) => props.theme.breakpointDesktop}) {
+    place-self: center;
+  }
 `;
 
 const HeroRight = styled.div`
@@ -49,10 +57,10 @@ const HeroRight = styled.div`
 `;
 
 const HeroFooter = styled.div`
-  min-height: 8rem;
-  width: 100vw;
+  min-height: 6rem;
+  width: 100%;
   background-color: ${(props) => props.theme.colorDark};
-  margin-top -1.8rem;
+  margin-top: -1.8rem;
 `;
 
 const ContactButton = styled.a`
@@ -64,22 +72,37 @@ const ContactButton = styled.a`
   box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
 `;
 
-const Hero = () => {
+/**
+ * Hero section for home page specifically.
+ * Note that the image within HeroRight is hidden on mobile devices,
+ * whereas the image after the HeroSection is mobile-only (to achieve 100% width).
+ */
+const Hero: React.FC = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="top-of-page">
       <HeroSection>
         <HeroLeft className="hero-left">
           <h1>
-            Hi, I&apos;m Lance Jeffers. I help make the world better through awesome
+            Hey, I&apos;m Lance Jeffers. I help make the world better through awesome
             software engineering.
           </h1>
-          <ContactButton>Contact me</ContactButton>
+          <ContactButton href="#contact">Contact me</ContactButton>
         </HeroLeft>
         <HeroRight className="hero-right">
-          <HeroSVG className="screen-size--md" />
+          <img
+            src="/images/Hero.svg"
+            loading="eager" // this image will always be in the viewport, so try to load it ASAP
+            className="screen-size--md"
+            alt="animated person and code in background"
+          />
         </HeroRight>
       </HeroSection>
-      <HeroSVG className="mobile-only" />
+      <img
+        src="/images/Hero.svg"
+        loading="eager" // this image will always be in the viewport, so try to load it ASAP
+        className="mobile-only"
+        alt="animated person and code in background"
+      />
       <HeroFooter />
     </HeroContainer>
   );

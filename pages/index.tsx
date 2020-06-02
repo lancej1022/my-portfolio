@@ -1,15 +1,23 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import { GetStaticProps } from 'next';
 import styled from 'styled-components';
 
 import NavBar from '../components/NavBar/NavBar';
 import Hero from '../components/Hero/Hero';
 import SkillsSections from '../components/SkillsSection/SkillsSection';
+import ProjectsContainer from '../components/containers/ProjectsContainer/ProjectsContainer';
+import AboutContainer from '../components/containers/AboutContainer/AboutContainer';
+import ContactContainer from '../components/containers/ContactContainer/ContactContainer';
+import Footer from '../components/Footer/Footer';
 
 import { getSortedPostsData } from '../lib/posts';
-import { GetStaticProps } from 'next';
 
-export const getStaticProps: GetStaticProps = async (context) => {
+/**
+ * Fetches data to display blog posts
+ * @param context
+ */
+// export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -18,14 +26,29 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
+/* Serves as a basic wrapper for page content */
 const Main = styled.main`
   max-width: 100%;
 `;
 
-export default function Home({ allPostsData }) {
+/* Serves as the main component that gets rendered as the home page 
+below line is commented out since post fetching hasnt been fully implemented yet
+*/
+// const Home: React.FunctionComponent = ({ allPostsData }: any) => {
+const Home: React.FunctionComponent = () => {
   return (
     <>
       <Head>
+        <title>Lance Jeffers</title>
+        <meta name="description" content="Lance Jeffers' personal portfolio" />
+        <meta
+          name="keywords"
+          content="Lance Jeffers,Software Engineer,React Engineer,Node.js Engineer,"
+        />
+        <meta
+          name="description"
+          content="The personal portfolio page for Lance Jeffers, a fullstack JavaScript engineer"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
           rel="stylesheet"
@@ -36,6 +59,10 @@ export default function Home({ allPostsData }) {
         {/* <Layout home> */}
         <Hero />
         <SkillsSections />
+        <ProjectsContainer />
+        <AboutContainer />
+        <ContactContainer />
+        <Footer />
         {/* 
         <section className={utilStyles.headingMd}>…</section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -58,4 +85,6 @@ export default function Home({ allPostsData }) {
       </Main>
     </>
   );
-}
+};
+
+export default Home;
