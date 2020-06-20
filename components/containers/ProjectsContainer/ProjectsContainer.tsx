@@ -34,27 +34,21 @@ const CardsContainer = styled.div`
   margin: 0 auto;
 
   @media (min-width: ${(props) => props.theme.breakpointTablet}) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width: ${(props) => props.theme.breakpointDesktop}) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  /* @media (min-width: ${(props) => props.theme.breakpointDesktop}) {
+    grid-template-columns: repeat(3, 1fr);
+  } */
 `;
 
 const projects: Project[] = [
   {
-    name: 'DrawQL',
-    copy: 'A GraphQL prototyping tool built with React, Apollo, Express, and PostgresQL.',
-    github: 'https://github.com/oslabs-beta/drawql',
-    background: '/images/drawqlCompressed.jpg'
-  },
-  {
     name: 'SnapDesk',
     copy:
       'Tool for fostering collaboration between Juniors and Seniors in your org. Built with React, Redux, and Express.',
-    github: 'https://github.com/lancej1022/snapdesk',
-    background: '/images/SnapdeskBG.jpg'
+    github: 'https://github.com/lancej1022/snapdeskV2',
+    background: '/images/Snapdeskv2.jpg'
   },
   {
     name: 'R.M.L',
