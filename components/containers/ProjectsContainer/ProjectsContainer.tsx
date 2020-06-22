@@ -48,7 +48,7 @@ const projects: Project[] = [
     copy:
       'Tool for fostering collaboration between Juniors and Seniors in your org. Built with React, Redux, and Express.',
     github: 'https://github.com/lancej1022/snapdeskV2',
-    background: '/images/Snapdeskv2.jpg'
+    background: '/images/snapdeskv2.jpg'
   },
   {
     name: 'R.M.L',
