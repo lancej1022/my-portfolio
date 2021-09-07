@@ -27,7 +27,7 @@
     "react-dom": "16.13.1",
     "react-parallax-tilt": "^1.3.42",
     "remark": "^12.0.0",
-    "remark-html": "^11.0.1",
+    "remark-html": "^13.0.2",
     "sass": "^1.26.5",
     "styled-components": "^5.1.0"
   },
